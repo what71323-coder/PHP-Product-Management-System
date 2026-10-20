@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: white;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: #222;
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+
+/* HERO */
+
+.contact-hero {
+    height: 400px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/homepage1.png");
+ 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.contact-hero-content {
+    color: white;
+    max-width: 800px;
+}
+
+.contact-hero-content p:first-child {
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.contact-hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.contact-hero-content p:last-child {
+    font-size: 18px;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 80px 7%;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+
+/* COMMON */
+
+.small-title {
+    color: #777;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p:not(.small-title) {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.info-box h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.info-box p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    background: #f5f5f5;
+    padding: 35px;
+    border-radius: 5px;
+}
+
+.contact-form h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #222;
+    color: white;
+
+    border: none;
+    padding: 13px;
+
+    font-size: 15px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #444;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+    margin: 7px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-section {
+        padding: 50px 20px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-hero {
+        height: 350px;
+    }
+
+    .contact-hero h1 {
+        font-size: 30px;
+    }
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
